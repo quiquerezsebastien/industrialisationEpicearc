@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:bnu="http://bootsfaces.net/ui">
+    <h:head>
+        <title>#{msg['appli.title']}</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="main.xhtml">
+            <ui:define name="top">
+                <h1>#{msg['appli.title']}</h1>
+                <p>#{msg['customer.create.form.title']}</p>
+            </ui:define>
+            <ui:define name="content">
+                <h:form>
+                    <bnu:row>
+                        <bnu:column col-md="6">
+                            #{msg['customer.firstName']} : <bnu:inputText id="firstName"
+                                             title="firstName"
+                                             required="true"
+                                             requiredMessage="#{msg['customer.create.error.firstName.required']}"
+                                             maxlength="100" 
+                                             value="${customerCreateBean.customer.firstName}"/>
+
+                            #{msg['customer.lastName']} : <bnu:inputText id="lastName"
+                                             title="lasteName"
+                                             required="true"
+                                             requiredMessage="#{msg['customer.create.error.lastName.required']}"
+                                             maxlength="100"
+                                             value="${customerCreateBean.customer.lastName}"/>
+
+                            #{msg['customer.adress']} : <bnu:inputText id="adress"
+                                             title="adress"
+                                             required="true"
+                                             requiredMessage="#{msg['customer.create.error.adress.required']}"
+                                             maxlength="100"
+                                             value="${customerCreateBean.customer.address}"/>
+
+                            #{msg['customer.zip']} : <bnu:inputText id="zip"
+                                             title="zip"
+                                             required="true"
+                                             requiredMessage="#{msg['customer.create.error.zip.required']}"
+                                             maxlength="10"
+                                             value="${customerCreateBean.customer.zip}"/>
+                        </bnu:column>
+
+                        <bnu:column col-md="6">
+                            #{msg['customer.city']} : <bnu:inputText id="city"
+                                             title="city"
+                                             required="true"
+                                             requiredMessage="#{msg['customer.create.error.city.required']}"
+                                             maxlength="50"
+                                             value="${customerCreateBean.customer.city}"/>
+
+                            #{msg['customer.phone']} : <bnu:inputText id="phone"
+                                             title="phone"
+                                             required="true"
+                                             requiredMessage="#{msg['customer.create.error.phone.required']}"
+                                             maxlength="10"
+                                             value="${customerCreateBean.customer.phone}"/>
+
+                            #{msg['customer.email']} : <bnu:inputText id="email"
+                                             title="email"
+                                             required="true"
+                                             requiredMessage="#{msg['customer.create.error.email.required']}"
+                                             maxlength="100"
+                                             value="${customerCreateBean.customer.email}"/>
+                        </bnu:column>
+
+                        <p>&nbsp;</p>
+                        <div class="pull-right">
+                            <bnu:commandButton id="reset" value="#{msg['button.label.reset']}" type="reset" />
+                            <bnu:commandButton id="submit" value="#{msg['button.label.submit']}" action="confirmation" />
+
+                        </div>
+                    </bnu:row>
+                </h:form>
+
+                <h:form>
+                    <bnu:commandButton id="cancel" value="#{msg['button.label.cancel']}" action="cancel" />
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

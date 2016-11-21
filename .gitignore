@@ -1,0 +1,12 @@
+/ODIepicearc/target/*
+!/ODIepicearc/target/ODIepicearc-1.0-WEB/
+/ODIepicearc/target/ODIepicearc-1.0-WEB/*
+!/ODIepicearc/target/ODIepicearc-1.0-WEB/resources/
+/ODIepicearc/target/ODIepicearc-1.0-WEB/resources/*
+!/ODIepicearc/target/ODIepicearc-1.0-WEB/resources/demo/
+/ODIepicearc/target/ODIepicearc-1.0-WEB/resources/demo/*
+!/ODIepicearc/target/ODIepicearc-1.0-WEB/resources/demo/images/
+!/ODIepicearc/target/site/
+/ODIepicearc/target/site/*
+!/ODIepicearc/target/site/apidocs/
+
