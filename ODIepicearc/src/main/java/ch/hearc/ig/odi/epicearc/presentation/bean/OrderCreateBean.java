@@ -178,7 +178,7 @@ public class OrderCreateBean implements Serializable{
      * @param event 
      */
     public void updateSizeList(AjaxBehaviorEvent event){
-        listProduct = service.getProductsForConiferType(ConiferType.valueOf(coniferToBook.getCode()));
+        listProduct = service.getProductsForConiferType(ConiferType.valueOf(coniferToBook.getCode().toUpperCase()));
         productToBook = null;
     }
     

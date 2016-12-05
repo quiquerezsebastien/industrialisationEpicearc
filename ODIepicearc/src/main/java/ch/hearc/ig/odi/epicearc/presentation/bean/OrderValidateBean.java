@@ -137,7 +137,6 @@ public class OrderValidateBean implements Serializable {
         pdf.addTitle("Bulletin de commande");
         Font font = FontFactory.getFont(fontPath, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
 
-        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         pdf.add(Image.getInstance(logo));
 
         StringBuilder stringBuilder = new StringBuilder();
@@ -182,7 +181,6 @@ public class OrderValidateBean implements Serializable {
         ServletContext servletContext = (ServletContext) FacesContext.getCurrentInstance().getExternalContext().getContext();
 
         // Récupère le chemin du logo et de la police
-        String logo = servletContext.getRealPath("") + File.separator + "resources" + File.separator + "demo" + File.separator + "images" + File.separator + "logo.jpg";
         String fontPath = servletContext.getRealPath("") + "/resources/fonts/FreeSans.ttf";
 
         Document pdf = (Document) document;
