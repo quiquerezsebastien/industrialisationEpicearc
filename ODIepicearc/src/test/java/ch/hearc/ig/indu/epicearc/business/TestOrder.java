@@ -36,6 +36,7 @@ public class TestOrder {
         PickupDate datePickup = new PickupDate(Long.valueOf(1), date, ConiferType.SPRUCE);
         
         Order order = new Order(Long.valueOf(1), date, Float.valueOf(100), dateDeliv, datePickup, product, customer);
+        assertNotNull(order);
     }
     
     @Test
